@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>株式会社テルズインターナショナル</title>
-</head>
-<body>
+<?php get_header() ?>
     <header>
         <div class="header__left">
-            <a href="/">
+            <a href="<?php echo get_home_url()?>">
 
                 <h1>TELLUS INTERNATIONAL</h1>
                 <p>有限会社テルズインターナショナル</p>
@@ -19,10 +9,10 @@
         </div>
         <nav class="header__right">
             <ul>
-                <li><a href="/">Top</a></li>
-                <li><a href="/business.html">Business</a></li>
-                <li><a href="/about.html">About us</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="<?php echo get_home_url()?>">Top</a></li>
+                <li><a href="<?php echo get_home_url()?>/business">Business</a></li>
+                <li><a href="<?php echo get_home_url()?>/about">About us</a></li>
+                <li><a href="<?php echo get_home_url()?>/contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -38,7 +28,7 @@
     <section class="concept">
         <div class="concept__left">
 
-            <img src="./assets/images/sec-concept.png" alt="concept">
+            <img src='<?php echo get_template_directory_uri() ?>/assets/images/sec-concept.png' alt="concept">
         </div>
         <div class="concept__right">
             <h2>CONCEPT</h2>
@@ -48,7 +38,7 @@
                 <p>ここにしかない、「あなただけ」</p>
             </div>
             <div class="concept__right_line"></div>
-            <a class="readmore" href="#">Read more →</a>
+            <a class="readmore" href="<?php echo get_home_url()?>/business">Read more →</a>
         </div>
 
     </section>
@@ -60,10 +50,10 @@
                 <p>他にはない</p>
                 <p>こだわりがある</p>
             </div>
-            <a class="readmore" href="#">About us →</a>
+            <a class="readmore" href="<?php echo get_home_url()?>/about">About us →</a>
         </div>
         <div class="company__right">
-            <img src="./assets/images/sec-company.png" alt="company">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/images/sec-company.png" alt="company">
         </div>
     </section>
     <section class="top-contact">
@@ -82,7 +72,7 @@
                 <p>お問い合わせ</p>
                 <p>フォーム</p>
                 <div class="top-contact__tell-form-line"></div>
-                <a href="#">
+                <a href="<?php echo get_home_url()?>/contact">
                     <p>CONTACT FORM</p>
                     <div class="arrow"></div>
                 </a>
@@ -117,24 +107,4 @@
     </section>
 </main>
 
-        <footer>
-            <div class="footer__inner">
-                <div class="tellus">
-                    <p class="tellus__en">TELLUS</p>
-                    <p class="tellus__en">INTERNATIONAL</p>
-                    <p class="tellus__ja">有限会社 テルズインターナショナル</p>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Top</a></li>
-                        <li><a href="#">Business</a></li>
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="praivacy-policy.html">Privacy policy</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <p class="copy-right">© 2023 TELLUS INTERNATIONAL Inc.</p>
-        </footer>
-    </body>
-    </html>
+      <?php get_footer() ?>

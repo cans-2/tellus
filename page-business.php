@@ -1,32 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>株式会社テルズインターナショナル</title>
-  </head>
+<?php  get_header()?>
   <body>
     <div class="business-page-title">
-      <header class="header">
+    <header class="header">
         <div class="header__left">
-          <h1>TELLUS INTERNATIONAL</h1>
-          <p>有限会社テルズインターナショナル</p>
+            <a href="<?php echo get_home_url()?>">
+
+                <h1>TELLUS INTERNATIONAL</h1>
+                <p>有限会社テルズインターナショナル</p>
+            </a>
         </div>
         <nav class="header__right">
-          <ul>
-            <li><a href="#">Top</a></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+            <ul>
+                <li><a href="<?php echo get_home_url()?>">Top</a></li>
+                <li><a href="<?php echo get_home_url()?>/business">Business</a></li>
+                <li><a href="<?php echo get_home_url()?>/about">About us</a></li>
+                <li><a href="<?php echo get_home_url()?>/contact">Contact</a></li>
+            </ul>
         </nav>
-      </header>
+    </header>
       <div class="business-page-title__text">
         <h2>Business</h2>
         <p>事業内容</p>
@@ -35,22 +26,22 @@
     <main>
       <div class="page-link">
         <div class="page-link__inner">
-          <a href="#">事業説明</a>
-          <a href="#">取扱について</a>
-          <a href="#">取引実績</a>
+          <a href="#business-about">事業説明</a>
+          <a href="#business-service">取扱について</a>
+          <a href="#achievement">取引実績</a>
         </div>
       </div>
 
-      <section class="business-about">
+      <section class="business-about" id="business-about">
         <div class="business-sec-img">
 
-            <img src="/assets/images/business-about.png" alt="about">
+            <img src="<?php echo get_template_directory_uri()?>/assets/images/business-about.png" alt="about">
         </div>
         <div class="business-about__inner">
           <div class="business-about__inner_title">
             <div class="sec-title">
-              <h3>代表挨拶</h3>
-              <p>Greeting</p>
+              <h3>事業説明</h3>
+              <p>About</p>
             </div>
           </div>
 
@@ -69,10 +60,10 @@
           </div>
         </div>
       </section>
-      <section class="business-service">
+      <section class="business-service" id="business-service">
         <div class="business-sec-img">
 
-            <img src="/assets/images/business-about.png" alt="about">
+            <img src="<?php echo get_template_directory_uri()?>/assets/images/business-about.png" alt="about">
         </div>
         <div class="business-service__inner">
           <div class="business-service__inner_title">
@@ -97,7 +88,7 @@
           </div>
         </div>
       </section>
-      <section class="achievement">
+      <section class="achievement" id="achievement">
         <div class="achievement__inner">
             <div class="achievement__inner_title">
                 <div class="sec-title">
@@ -111,24 +102,4 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div class="footer__inner">
-        <div class="tellus">
-          <p class="tellus__en">TELLUS</p>
-          <p class="tellus__en">INTERNATIONAL</p>
-          <p class="tellus__ja">有限会社 テルズインターナショナル</p>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#">Top</a></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </nav>
-      </div>
-      <p class="copy-right">© 2023 TELLUS INTERNATIONAL Inc.</p>
-    </footer>
-  </body>
-</html>
+   <?php get_footer() ?>

@@ -75,7 +75,7 @@ header .header__right ul {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  background-image: url(/assets/images/main-img.jpeg);
+  background-image: url(/wp-content/themes/tellus/assets/images/main-img.jpeg);
   position: relative;
 }
 .main-img .catchcopy {
@@ -186,7 +186,7 @@ header .header__right ul {
   width: 100%;
   height: 650px;
   background: #1b1717;
-  background-image: url(/assets/images/sec-contact.png);
+  background-image: url(/wp-content/themes/tellus/assets/images/sec-contact.png);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -378,7 +378,7 @@ footer .copy-right {
 .privacy-policy {
   margin: 0 auto;
   text-align: center;
-  padding-top: 72px;
+  padding-top: 144px;
 }
 .privacy-policy h2 {
   font-family: "kadwa";
@@ -406,7 +406,7 @@ footer .copy-right {
 
 .aboutpage-title {
   height: 420px;
-  background-image: url(/assets/images/about-title.png);
+  background-image: url(/wp-content/themes/tellus/assets/images/about-title.png);
   background-repeat: no-repeat;
   position: relative;
 }
@@ -559,7 +559,7 @@ footer .copy-right {
 
 .business-page-title {
   height: 420px;
-  background-image: url(/assets/images/business-title.png);
+  background-image: url(/wp-content/themes/tellus/assets/images/business-title.png);
   background-repeat: no-repeat;
   position: relative;
 }
@@ -659,7 +659,7 @@ footer .copy-right {
 
 .contact-page-title {
   height: 420px;
-  background-image: url(/assets/images/contact-title.png);
+  background-image: url(/wp-content/themes/tellus/assets/images/contact-title.png);
   background-repeat: no-repeat;
   position: relative;
 }

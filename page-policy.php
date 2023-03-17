@@ -1,30 +1,21 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>株式会社テルズインターナショナル</title>
-  </head>
+<?php get_header() ?>
   <body>
-    <header>
-      <div class="header__left">
-        <h1>TELLUS INTERNATIONAL</h1>
-        <p>有限会社テルズインターナショナル</p>
-      </div>
-      <nav class="header__right">
-        <ul>
-          <li><a href="#">Top</a></li>
-          <li><a href="#">Business</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+  <header>
+        <div class="header__left">
+            <a href="<?php echo get_home_url()?>">
+
+                <h1>TELLUS INTERNATIONAL</h1>
+                <p>有限会社テルズインターナショナル</p>
+            </a>
+        </div>
+        <nav class="header__right">
+            <ul>
+                <li><a href="<?php echo get_home_url()?>">Top</a></li>
+                <li><a href="<?php echo get_home_url()?>/business">Business</a></li>
+                <li><a href="<?php echo get_home_url()?>/about">About us</a></li>
+                <li><a href="<?php echo get_home_url()?>/contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="privacy-policy">
@@ -46,24 +37,5 @@
             </div>
         </div>
     </main>
-    <footer>
-      <div class="footer__inner">
-        <div class="tellus">
-          <p class="tellus__en">TELLUS</p>
-          <p class="tellus__en">INTERNATIONAL</p>
-          <p class="tellus__ja">有限会社 テルズインターナショナル</p>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#">Top</a></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </nav>
-      </div>
-      <p class="copy-right">© 2023 TELLUS INTERNATIONAL Inc.</p>
-    </footer>
-  </body>
-</html>
+  
+<?php get_footer() ?>

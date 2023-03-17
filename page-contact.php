@@ -1,32 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/destyle.css@3.0.2/destyle.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>株式会社テルズインターナショナル</title>
-  </head>
+<?php get_header() ?>
   <body>
     <div class="contact-page-title">
-      <header class="header">
+    <header class="header">
         <div class="header__left">
-          <h1>TELLUS INTERNATIONAL</h1>
-          <p>有限会社テルズインターナショナル</p>
+            <a href="<?php echo get_home_url()?>">
+
+                <h1>TELLUS INTERNATIONAL</h1>
+                <p>有限会社テルズインターナショナル</p>
+            </a>
         </div>
         <nav class="header__right">
-          <ul>
-            <li><a href="#">Top</a></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+            <ul>
+                <li><a href="<?php echo get_home_url()?>">Top</a></li>
+                <li><a href="<?php echo get_home_url()?>/business">Business</a></li>
+                <li><a href="<?php echo get_home_url()?>/about">About us</a></li>
+                <li><a href="<?php echo get_home_url()?>/contact">Contact</a></li>
+            </ul>
         </nav>
-      </header>
+    </header>
       <div class="contact-page-title__text">
         <h2>Contact</h2>
         <p>お問い合わせ</p>
@@ -40,8 +31,8 @@
           <div class="contact-flow__inner_item">
             <div class="contact-flow__inner_item_number"><p>01</p></div>
             <div class="contact-flow__inner_item_images">
-              <img src="/assets/images/item-phone.png" alt="phone" />
-              <img src="/assets/images/item-mail.png" alt="mail" />
+              <img src="<?php echo get_template_directory_uri()?>/assets/images/item-phone.png" alt="phone" />
+              <img src="<?php echo get_template_directory_uri()?>/assets/images/item-mail.png" alt="mail" />
             </div>
             <div class="contact-flow__inner_item_text">
               <h5>お問い合わせ</h5>
@@ -51,14 +42,14 @@
                 <p>面談の日程を決めさせていただきます。</p>
               </div>
             </div>
-            <div class="link"><a href="#">Contact Form →</a></div>
+            <div class="link"><a href="#form">Contact Form →</a></div>
           </div>
           <!-- 2 -->
           <div class="contact-flow__inner_item">
             <div class="contact-flow__inner_item_number"><p>02</p></div>
             <div class="contact-flow__inner_item_images">
-              <img src="/assets/images/item-soudan.png" alt="phone" />
-              <img src="/assets/images/item-contract.png" alt="mail" />
+              <img src="<?php echo get_template_directory_uri()?>/assets/images/item-soudan.png" alt="phone" />
+              <img src="<?php echo get_template_directory_uri()?>/assets/images/item-contract.png" alt="mail" />
             </div>
             <div class="contact-flow__inner_item_text">
               <h5>ご相談・ご契約</h5>
@@ -72,8 +63,8 @@
           <div class="contact-flow__inner_item">
             <div class="contact-flow__inner_item_number"><p>03</p></div>
             <div class="contact-flow__inner_item_images">
-              <img src="/assets/images/item-memo.png" alt="phone" />
-              <img src="/assets/images/item-nousha.png" alt="mail" />
+              <img src="<?php echo get_template_directory_uri()?>/assets/images/item-memo.png" alt="phone" />
+              <img src="<?php echo get_template_directory_uri()?>/assets/images/item-nousha.png" alt="mail" />
             </div>
             <div class="contact-flow__inner_item_text">
               <h5>納車</h5>
@@ -86,7 +77,7 @@
       </section>
       <a href="tel:052-732-5728">
         <div class="tel-btn">
-          <img src="/assets/images/phone-white.png" alt="tel" />
+          <img src="<?php echo get_template_directory_uri()?>/assets/images/phone-white.png" alt="tel" />
           <div class="tel-btn__inner">
             <h6>電話でお問い合わせ</h6>
             <p>052-732-5728</p>
@@ -94,24 +85,5 @@
         </div>
       </a>
     </main>
-    <footer>
-      <div class="footer__inner">
-        <div class="tellus">
-          <p class="tellus__en">TELLUS</p>
-          <p class="tellus__en">INTERNATIONAL</p>
-          <p class="tellus__ja">有限会社 テルズインターナショナル</p>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#">Top</a></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </nav>
-      </div>
-      <p class="copy-right">© 2023 TELLUS INTERNATIONAL Inc.</p>
-    </footer>
-  </body>
-</html>
+    
+  <?php get_footer() ?>
