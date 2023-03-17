@@ -1,0 +1,110 @@
+@use "./common" as *;
+
+.business-page-title {
+  height: 420px;
+  background-image: url(/assets/images/business-title.png);
+  background-repeat: no-repeat;
+  position: relative;
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    h2 {
+      font-family: "Libre Baskerville";
+      font-size: 48px;
+      letter-spacing: 2px;
+    }
+    p {
+      font-size: 24px;
+    }
+  }
+}
+
+.page-link {
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 108px;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    letter-spacing: 0.4px;
+  }
+}
+
+.business-sec-content {
+  padding-top: 108px;
+  letter-spacing: 4px;
+  padding-left: 160px;
+  padding-bottom: 179.5px;
+
+  h4 {
+    text-align: left;
+    font-family: "Shippori Mincho";
+    font-weight: bold;
+    font-size: 32px;
+    color: #1b50a2;
+  }
+  ul {
+    border-left: 3px solid #1b50a2;
+    margin-top: 56px;
+    padding-left: 42px;
+    margin-left: 24px;
+    font-weight: normal;
+    li {
+      font-size: 16px;
+      line-height: 1.6;
+      &:first-child {
+        font-size: 20px;
+        padding-bottom: 16px;
+      }
+    }
+  }
+}
+
+.business-sec-img {
+  position: absolute;
+  top: 0;
+  right: 120px;
+
+}
+
+.business-about {
+  position: relative;
+  background: #f1f1f1;
+  &__inner {
+    &_title {
+      padding-top: 64px;
+    }
+  }
+}
+
+.business-service{
+    position: relative;
+    background: #fff;
+    &__inner{
+        &_title{
+            padding-top: 64px;
+        }
+    }
+}
+
+.achievement{
+    background: #f1f1f1;
+    &__inner{
+        &_title{
+            padding-top: 64px;
+        }
+    }
+    .slideshow{
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}

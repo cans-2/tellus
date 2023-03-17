@@ -1,0 +1,36 @@
+@use "./common" as *;
+
+footer{
+    width: 100%;
+    height: 200px;
+    background: #242222;
+    color: #fff;
+    .footer__inner{
+        display: flex;
+        align-items: center;
+justify-content: center;
+padding-top: 48px;
+column-gap: 320px;
+        .tellus {
+            &__en {
+              font-size: 24px;
+              font-weight: bold;
+              font-family: "kadwa";
+            }
+            &__ja {
+              font-size: 16px;
+              font-weight: normal;
+            }
+          }
+          ul{
+            display: flex;
+            column-gap: 48px;
+            font-family: 'kadwa';
+          }
+    }
+    .copy-right{
+        text-align: center;
+        padding-top: 48px;
+        font-size: 12px;
+    }
+}

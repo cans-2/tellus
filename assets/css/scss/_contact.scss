@@ -1,0 +1,133 @@
+@use "./common" as *;
+
+.contact-page-title {
+  height: 420px;
+  background-image: url(/assets/images/contact-title.png);
+  background-repeat: no-repeat;
+  position: relative;
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    h2 {
+      font-family: "Libre Baskerville";
+      font-size: 48px;
+      letter-spacing: 2px;
+    }
+    p {
+      font-size: 24px;
+    }
+  }
+}
+
+.flow {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  font-size: 24px;
+}
+
+.contact-flow {
+  padding-left: 64px;
+  padding-right: 64px;
+  padding-bottom: 144px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    .link {
+      padding-top: 32px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: normal;
+    }
+    &_item {
+      position: relative;
+      width: 450px;
+      &_number {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: "Kadwa";
+        font-size: 48px;
+      }
+      &_images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 48px;
+        padding-top: 160px;
+      }
+      &_text {
+        padding-top: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: normal;
+        color: #363636;
+        h5 {
+          font-size: 24px;
+          position: relative;
+          &::after {
+            content: "";
+            width: 200px;
+            height: 1px;
+            background: #363636;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+          }
+        }
+        &_p {
+          padding-top: 40px;
+          font-size: 14px;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
+.tel-btn {
+  background: #363636;
+  width: 600px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  &__inner {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: #fff;
+    h6 {
+      font-weight: bold;
+      font-size: 32px;
+    }
+    p {
+      padding-top: 12px;
+      display: block;
+      font-size: 24px;
+      font-family: "Kadwa";
+      text-align: center;
+      letter-spacing: 2px;
+    }
+  }
+}

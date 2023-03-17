@@ -1,0 +1,44 @@
+@use "./common" as *;
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  .header__left {
+    margin-left: 40px;
+    h1 {
+      font-family: "kadwa";
+      font-size: 22px;
+      font-weight: bold;
+      padding-top: 24px;
+    }
+    p {
+      font-size: 10px;
+      padding-bottom: 16px;
+    }
+  }
+
+  .header__right {
+    ul {
+      display: flex;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      column-gap: 40px;
+      margin-right: 48px;
+      font-family: "kadwa";
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+}
+
+.header{
+  color: #fff;
+  position: static;
+  position: absolute;
+}

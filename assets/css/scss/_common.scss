@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+body{
+    font-family:'Noto Sans JP';
+
+}
+
+.sec-title{
+    text-align: center;
+    h3{
+        font-family: 'Shippori Mincho';
+        font-size: 36px;
+        font-weight: 500;
+        color: #363636;
+    }
+    p{
+        font-size: 22px;
+        font-family: 'Libre Baskerville';
+        font-weight:  normal;
+        letter-spacing: .5px;
+        color: #B0B0B0;
+        padding-top: 18px;
+    }
+}

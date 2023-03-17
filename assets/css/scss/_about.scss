@@ -1,0 +1,163 @@
+@use "./common" as *;
+
+.aboutpage-title {
+  height: 420px;
+  background-image: url(/assets/images/about-title.png);
+  background-repeat: no-repeat;
+  position: relative;
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    h2 {
+      font-family: "Libre Baskerville";
+      font-size: 48px;
+      letter-spacing: 2px;
+    }
+    p {
+      font-size: 24px;
+    }
+  }
+}
+
+.philosophy {
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 300px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  &__content {
+    font-family: "Shippori Mincho";
+    max-width: 580px;
+    letter-spacing: 0.5px;
+    position: relative;
+    &::before {
+      content: "";
+      width: 1px;
+      height: 270px;
+      background: #363636;
+      position: absolute;
+      top: 0;
+      left: -115px;
+    }
+    .philosophy__content_title {
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 4;
+    }
+  }
+}
+
+.greeting {
+  background: #f1f1f1;
+  &__inner {
+    max-width: 820px;
+    margin: 0 auto;
+    &_title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 95px;
+    }
+
+    &_content {
+      text-align: left;
+      padding-top: 56px;
+      font-family: "Shippori Mincho";
+      font-weight: normal;
+      font-size: 16px;
+      p {
+        padding-bottom: 20px;
+      }
+    }
+    &_representative {
+      font-size: 14px;
+      font-family: "Shippori Mincho";
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      line-height: 3;
+      padding-top: 108px;
+      padding-bottom: 90px;
+    }
+  }
+}
+
+.hr {
+  width: 100%;
+}
+
+.about-info {
+  &__inner {
+    &_title {
+      padding-top: 90px;
+    }
+    dl {
+      padding-top: 64px;
+      padding-bottom: 120px;
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: normal;
+      font-size: 16px;
+      color: #363636;
+      display: flex;
+      flex-wrap: wrap;
+      letter-spacing: 1px;
+      dt {
+        font-weight: normal;
+        padding-right: 72px;
+        width: 25%;
+      }
+      dd {
+        width: 75%;
+        padding-bottom: 32px;
+        border-left: 1px solid #363636;
+        padding-left: 100px;
+        line-height: 1.6;
+      }
+      .detail {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.about-access {
+  background: #f1f1f1;
+  &__inner {
+    &_title {
+      padding-top: 64px;
+    }
+    &_text {
+      text-align: center;
+      font-size: 18px;
+      color: #363636;
+      font-weight: normal;
+      padding-top: 48px;
+      line-height: 1.8;
+    }
+    &_map {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+padding-top: 24px;
+padding-bottom: 96px;
+      iframe {
+        width: 900px;
+        height: 570px;
+      }
+    }
+  }
+}
