@@ -1,51 +1,59 @@
 @use "./common" as *;
 @use "./mixin" as *;
 
-
-footer{
-    width: 100%;
-    background: #242222;
-    color: #fff;
-    .footer__inner{
-        display: flex;
-        align-items: center;
-justify-content: center;
-padding-top: 48px;
-column-gap: 320px;
-        .tellus {
-            &__en {
-              font-size: 30px;
-              font-weight: bold;
-              font-family: "kadwa";
-              @include w1440{
-                font-size: 24px;
-              }
-            }
-            &__ja {
-              font-size: 20px;
-              font-weight: normal;
-              @include w1440{
-                font-size: 16px;
-              }
-            }
-          }
-          ul{
-            display: flex;
-            column-gap: 48px;
-            font-family: 'kadwa';
-            font-size: 22px;
-            @include w1440{
-              font-size: 18px;
-            }
-          }
+footer {
+  width: 100%;
+  background: #242222;
+  color: #fff;
+  .footer__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 48px;
+    column-gap: 320px;
+    @include w1200 {
+      column-gap: 0;
+      justify-content: space-around;
     }
-    .copy-right{
-        text-align: center;
-        padding-top: 48px;
-        padding-bottom: 12px;
-        font-size: 16px;
-        @include w1440{
-          font-size: 12px;
+    .tellus {
+      &__en {
+        font-size: 30px;
+        font-weight: bold;
+        font-family: "kadwa";
+        @include w1440 {
+          font-size: 24px;
         }
+      }
+      &__ja {
+        font-size: 20px;
+        font-weight: normal;
+        @include w1440 {
+          font-size: 16px;
+        }
+      }
     }
+    ul {
+      display: flex;
+      column-gap: 48px;
+      font-family: "kadwa";
+      font-size: 22px;
+      @include w1440 {
+        font-size: 18px;
+      }
+      @include w900 {
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 10px;
+      }
+    }
+  }
+  .copy-right {
+    text-align: center;
+    padding-top: 48px;
+    padding-bottom: 12px;
+    font-size: 16px;
+    @include w1440 {
+      font-size: 12px;
+    }
+  }
 }
