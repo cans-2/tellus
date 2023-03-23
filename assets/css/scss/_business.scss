@@ -73,7 +73,6 @@
   position: absolute;
   top: 0;
   right: 120px;
-
 }
 
 .business-about {
@@ -86,25 +85,75 @@
   }
 }
 
-.business-service{
-    position: relative;
-    background: #fff;
-    &__inner{
-        &_title{
-            padding-top: 64px;
-        }
+.business-service {
+  position: relative;
+  background: #fff;
+  &__inner {
+    &_title {
+      padding-top: 64px;
     }
+  }
 }
 
-.achievement{
-    background: #f1f1f1;
-    &__inner{
-        &_title{
-            padding-top: 64px;
-        }
+.achievement {
+  background: #f1f1f1;
+  &__inner {
+    &_title {
+      padding-top: 64px;
     }
-    .slideshow{
-        padding-top: 90px;
-        padding-bottom: 90px;
+  }
+
+  // カルーセルスライダー
+  .carousel {
+    padding-top: 90px;
+    padding-bottom: 160px;
+    .swiper-slide-prev {
+      opacity: 0.7;
     }
+    .swiper-slide-next {
+      opacity: 0.7;
+    }
+    .swiper-slide {
+      width: 900px;
+      height: 500px;
+      object-fit: cover; /* 画像をアスペクト比を保ったまま親要素にフィットさせる */
+    }
+   
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+      top: 60%;
+      transform: translateY(-50%);
+    }
+
+    .swiper-button-prev {
+      left: 100px; /* 左側に配置 */
+    }
+
+    .swiper-button-next {
+      right: 100px; /* 右側に配置 */
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      font-size: 50px; /* ボタンのアイコンサイズを変更 */
+      color: #fff; /* ボタンのアイコン色を変更 */
+    }
+
+    .swiper-pagination {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: -120px;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: black;
+    }
+    .swiper-pagination-bullet{
+      width: 10px;
+      height: 10px;
+    }
+  }
 }

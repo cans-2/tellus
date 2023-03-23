@@ -131,3 +131,108 @@
     }
   }
 }
+
+.contact-form {
+  margin-top: 105px;
+  margin-bottom: 160px;
+  &__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 126px 60px;
+    border: #363636 1px solid;
+    h4 {
+      font-weight: bold;
+      font-size: 36px;
+      text-align: center;
+    }
+    &_title {
+      max-width: 750px;
+      margin: 0 auto;
+      padding-top: 60px;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 1.5;
+      a {
+        color: #1b50a2;
+        border-bottom: 1px solid #1b50a2;
+      }
+    }
+
+    &_form {
+      padding-top: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #363636;
+      .required::before {
+        content: "*";
+        margin-left: -8px;
+        color: red;
+        position: absolute;
+      }
+      p {
+       
+        label {
+          position: relative;
+          padding-bottom: 14px;
+          width: 700px;
+          margin-bottom: 24px;
+          padding-right: 24px;
+          padding-left: 24px;
+          border-bottom: 1px solid #d9d9d9;
+          display: flex;
+          justify-content: space-between;
+         
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+          width: 400px;
+          height: 40px;
+          background: #d9d9d9;
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+        textarea {
+          width: 400px;
+          height: 220px;
+          background: #d9d9d9;
+          padding: 8px;
+          margin-bottom: 30px;
+        }
+      }
+      .privacy {
+        input[type="checkbox"]{
+          width: 20px;
+          height: 20px;
+          border-radius: 0%;
+          margin-right: 8px;
+          cursor: pointer;
+        }
+        p {
+          label {
+            display: flex;
+            justify-content: center;
+            border-bottom: none;
+            a{
+              color: #1b50a2;
+            }
+          }
+        }
+      }
+    input[type="submit"]{
+        background: #363636;
+      width: 180px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      color: #fff;
+      margin-top: 24px;
+      cursor: pointer;
+      }
+    }
+  }
+}

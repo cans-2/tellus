@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
@@ -652,9 +653,51 @@ footer .copy-right {
 .achievement__inner_title {
   padding-top: 64px;
 }
-.achievement .slideshow {
+.achievement .carousel {
   padding-top: 90px;
-  padding-bottom: 90px;
+  padding-bottom: 160px;
+}
+.achievement .carousel .swiper-slide-prev {
+  opacity: 0.7;
+}
+.achievement .carousel .swiper-slide-next {
+  opacity: 0.7;
+}
+.achievement .carousel .swiper-slide {
+  width: 900px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover; /* 画像をアスペクト比を保ったまま親要素にフィットさせる */
+}
+.achievement .carousel .swiper-button-prev,
+.achievement .carousel .swiper-button-next {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+}
+.achievement .carousel .swiper-button-prev {
+  left: 100px; /* 左側に配置 */
+}
+.achievement .carousel .swiper-button-next {
+  right: 100px; /* 右側に配置 */
+}
+.achievement .carousel .swiper-button-prev::after,
+.achievement .carousel .swiper-button-next::after {
+  font-size: 50px; /* ボタンのアイコンサイズを変更 */
+  color: #fff; /* ボタンのアイコン色を変更 */
+}
+.achievement .carousel .swiper-pagination {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: -120px;
+}
+.achievement .carousel .swiper-pagination-bullet-active {
+  background-color: black;
+}
+.achievement .carousel .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
 }
 
 .contact-page-title {
@@ -788,4 +831,100 @@ footer .copy-right {
   font-family: "Kadwa";
   text-align: center;
   letter-spacing: 2px;
+}
+
+.contact-form {
+  margin-top: 105px;
+  margin-bottom: 160px;
+}
+.contact-form__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 126px 60px;
+  border: #363636 1px solid;
+}
+.contact-form__inner h4 {
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+}
+.contact-form__inner_title {
+  max-width: 750px;
+  margin: 0 auto;
+  padding-top: 60px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.contact-form__inner_title a {
+  color: #1b50a2;
+  border-bottom: 1px solid #1b50a2;
+}
+.contact-form__inner_form {
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #363636;
+}
+.contact-form__inner_form .required::before {
+  content: "*";
+  margin-left: -8px;
+  color: red;
+  position: absolute;
+}
+.contact-form__inner_form p label {
+  position: relative;
+  padding-bottom: 14px;
+  width: 700px;
+  margin-bottom: 24px;
+  padding-right: 24px;
+  padding-left: 24px;
+  border-bottom: 1px solid #d9d9d9;
+  display: flex;
+  justify-content: space-between;
+}
+.contact-form__inner_form p input[type=text],
+.contact-form__inner_form p input[type=email],
+.contact-form__inner_form p input[type=tel] {
+  width: 400px;
+  height: 40px;
+  background: #d9d9d9;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.contact-form__inner_form p textarea {
+  width: 400px;
+  height: 220px;
+  background: #d9d9d9;
+  padding: 8px;
+  margin-bottom: 30px;
+}
+.contact-form__inner_form .privacy input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  border-radius: 0%;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.contact-form__inner_form .privacy p label {
+  display: flex;
+  justify-content: center;
+  border-bottom: none;
+}
+.contact-form__inner_form .privacy p label a {
+  color: #1b50a2;
+}
+.contact-form__inner_form input[type=submit] {
+  background: #363636;
+  width: 180px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #fff;
+  margin-top: 24px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

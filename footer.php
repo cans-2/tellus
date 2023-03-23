@@ -1,3 +1,5 @@
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="<?php echo get_template_directory_uri()?>/assets/js/swiper.js"></script>
 <footer>
     <?php wp_footer() ?>
             <div class="footer__inner">
