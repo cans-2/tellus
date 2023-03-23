@@ -97,7 +97,7 @@
             <p>Achievement</p>
           </div>
         </div>
-        <div class="carousel">
+        <div class="swiper">
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">

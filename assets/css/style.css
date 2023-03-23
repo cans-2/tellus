@@ -653,49 +653,51 @@ footer .copy-right {
 .achievement__inner_title {
   padding-top: 64px;
 }
-.achievement .carousel {
+.achievement .swiper {
   padding-top: 90px;
   padding-bottom: 160px;
 }
-.achievement .carousel .swiper-slide-prev {
+.achievement .swiper .swiper-slide-prev {
   opacity: 0.7;
 }
-.achievement .carousel .swiper-slide-next {
+.achievement .swiper .swiper-slide-next {
   opacity: 0.7;
 }
-.achievement .carousel .swiper-slide {
-  width: 900px;
-  height: 500px;
+.achievement .swiper .swiper-slide {
   -o-object-fit: cover;
      object-fit: cover; /* 画像をアスペクト比を保ったまま親要素にフィットさせる */
 }
-.achievement .carousel .swiper-button-prev,
-.achievement .carousel .swiper-button-next {
+.achievement .swiper .swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.achievement .swiper .swiper-button-prev,
+.achievement .swiper .swiper-button-next {
   position: absolute;
   top: 60%;
   transform: translateY(-50%);
 }
-.achievement .carousel .swiper-button-prev {
+.achievement .swiper .swiper-button-prev {
   left: 100px; /* 左側に配置 */
 }
-.achievement .carousel .swiper-button-next {
+.achievement .swiper .swiper-button-next {
   right: 100px; /* 右側に配置 */
 }
-.achievement .carousel .swiper-button-prev::after,
-.achievement .carousel .swiper-button-next::after {
+.achievement .swiper .swiper-button-prev::after,
+.achievement .swiper .swiper-button-next::after {
   font-size: 50px; /* ボタンのアイコンサイズを変更 */
   color: #fff; /* ボタンのアイコン色を変更 */
 }
-.achievement .carousel .swiper-pagination {
+.achievement .swiper .swiper-pagination {
   display: block;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: -120px;
+  margin-bottom: -60px;
 }
-.achievement .carousel .swiper-pagination-bullet-active {
+.achievement .swiper .swiper-pagination-bullet-active {
   background-color: black;
 }
-.achievement .carousel .swiper-pagination-bullet {
+.achievement .swiper .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
 }
