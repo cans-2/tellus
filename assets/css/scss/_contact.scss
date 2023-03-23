@@ -1,4 +1,6 @@
 @use "./common" as *;
+@use "./mixin" as *;
+
 
 .contact-page-title {
   height: 420px;
@@ -44,6 +46,14 @@
       text-align: center;
       font-size: 24px;
       font-weight: normal;
+      a {
+        display: block;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          transform: translateX(20px);
+        }
+      }
     }
     &_item {
       position: relative;
@@ -101,6 +111,13 @@
   height: 120px;
   margin: 0 auto;
   position: relative;
+  overflow: hidden; /* コンテンツがはみ出さないようにするために必要 */
+  transition: all 0.3s ease; /* ボタン全体にアニメーションを追加 */
+  &:hover {
+    transform: scale(
+      0.99
+    ); /* ボタン全体に押し込まれるようなアニメーションを追加 */
+  }
   img {
     position: absolute;
     top: 50%;
@@ -108,7 +125,14 @@
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+    transition: all 0.3s ease; /* アニメーションを追加 */
   }
+  &:hover img {
+    transform: translate(-50%, -50%) scale(0.9); /* 押し込まれるアニメーションを追加 */
+    -webkit-transform: translate(-50%, -50%) scale(0.9);
+    -ms-transform: translate(-50%, -50%) scale(0.9);
+  }
+
   &__inner {
     position: absolute;
     top: 60%;
@@ -155,6 +179,9 @@
       a {
         color: #1b50a2;
         border-bottom: 1px solid #1b50a2;
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
 
@@ -172,7 +199,6 @@
         position: absolute;
       }
       p {
-       
         label {
           position: relative;
           padding-bottom: 14px;
@@ -183,7 +209,6 @@
           border-bottom: 1px solid #d9d9d9;
           display: flex;
           justify-content: space-between;
-         
         }
         input[type="text"],
         input[type="email"],
@@ -193,6 +218,7 @@
           background: #d9d9d9;
           padding-left: 8px;
           padding-right: 8px;
+          outline: none;
         }
         textarea {
           width: 400px;
@@ -200,10 +226,12 @@
           background: #d9d9d9;
           padding: 8px;
           margin-bottom: 30px;
+          outline: none;
+
         }
       }
       .privacy {
-        input[type="checkbox"]{
+        input[type="checkbox"] {
           width: 20px;
           height: 20px;
           border-radius: 0%;
@@ -215,23 +243,26 @@
             display: flex;
             justify-content: center;
             border-bottom: none;
-            a{
+            a {
               color: #1b50a2;
+              &:hover{
+                opacity: 0.7;
+              }
             }
           }
         }
       }
-    input[type="submit"]{
+      input[type="submit"] {
         background: #363636;
-      width: 180px;
-      height: 50px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      color: #fff;
-      margin-top: 24px;
-      cursor: pointer;
+        width: 180px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        color: #fff;
+        margin-top: 24px;
+        cursor: pointer;
       }
     }
   }

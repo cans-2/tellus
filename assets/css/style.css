@@ -137,9 +137,13 @@ header .header__right ul {
   margin-top: 60px;
 }
 .concept__right .readmore {
-  padding-top: 120px;
+  margin-top: 120px;
   font-family: "kadwa";
   font-size: 16px;
+  transition: all 0.5s ease-in-out;
+}
+.concept__right .readmore:hover {
+  transform: translate(20px);
 }
 
 .company {
@@ -178,6 +182,10 @@ header .header__right ul {
   padding-top: 120px;
   font-family: "kadwa";
   font-size: 16px;
+  transition: all 0.5s ease-in-out;
+}
+.company__left .readmore:hover {
+  transform: translate(20px);
 }
 .company__right {
   width: 50%;
@@ -267,6 +275,9 @@ header .header__right ul {
   font-size: 22px;
   font-weight: 400;
 }
+.top-contact .top-contact__form a p:hover + .arrow {
+  transform: translateX(30px);
+}
 .top-contact .top-contact__form a .arrow {
   width: 100px;
   height: 1px;
@@ -274,6 +285,7 @@ header .header__right ul {
   position: relative;
   margin: 0 auto;
   margin-top: 24px;
+  transition: all 0.7s ease-in-out;
 }
 .top-contact .top-contact__form a .arrow::before {
   content: "";
@@ -674,7 +686,7 @@ footer .copy-right {
 .achievement .swiper .swiper-button-prev,
 .achievement .swiper .swiper-button-next {
   position: absolute;
-  top: 60%;
+  top: 55%;
   transform: translateY(-50%);
 }
 .achievement .swiper .swiper-button-prev {
@@ -749,6 +761,13 @@ footer .copy-right {
   font-size: 24px;
   font-weight: normal;
 }
+.contact-flow__inner .link a {
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+.contact-flow__inner .link a:hover {
+  transform: translateX(20px);
+}
 .contact-flow__inner_item {
   position: relative;
   width: 450px;
@@ -804,6 +823,11 @@ footer .copy-right {
   height: 120px;
   margin: 0 auto;
   position: relative;
+  overflow: hidden; /* コンテンツがはみ出さないようにするために必要 */
+  transition: all 0.3s ease; /* ボタン全体にアニメーションを追加 */
+}
+.tel-btn:hover {
+  transform: scale(0.99); /* ボタン全体に押し込まれるようなアニメーションを追加 */
 }
 .tel-btn img {
   position: absolute;
@@ -812,6 +836,12 @@ footer .copy-right {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  transition: all 0.3s ease; /* アニメーションを追加 */
+}
+.tel-btn:hover img {
+  transform: translate(-50%, -50%) scale(0.9); /* 押し込まれるアニメーションを追加 */
+  -webkit-transform: translate(-50%, -50%) scale(0.9);
+  -ms-transform: translate(-50%, -50%) scale(0.9);
 }
 .tel-btn__inner {
   position: absolute;
@@ -862,6 +892,9 @@ footer .copy-right {
   color: #1b50a2;
   border-bottom: 1px solid #1b50a2;
 }
+.contact-form__inner_title a:hover {
+  opacity: 0.7;
+}
 .contact-form__inner_form {
   padding-top: 120px;
   display: flex;
@@ -895,6 +928,7 @@ footer .copy-right {
   background: #d9d9d9;
   padding-left: 8px;
   padding-right: 8px;
+  outline: none;
 }
 .contact-form__inner_form p textarea {
   width: 400px;
@@ -902,6 +936,7 @@ footer .copy-right {
   background: #d9d9d9;
   padding: 8px;
   margin-bottom: 30px;
+  outline: none;
 }
 .contact-form__inner_form .privacy input[type=checkbox] {
   width: 20px;
@@ -917,6 +952,9 @@ footer .copy-right {
 }
 .contact-form__inner_form .privacy p label a {
   color: #1b50a2;
+}
+.contact-form__inner_form .privacy p label a:hover {
+  opacity: 0.7;
 }
 .contact-form__inner_form input[type=submit] {
   background: #363636;

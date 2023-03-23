@@ -47,8 +47,8 @@
         <div class="greeting__inner">
           <div class="greeting__inner_title">
             <div class="sec-title">
-              <h3>事業説明</h3>
-              <p>About</p>
+              <h3>代表挨拶</h3>
+              <p>Greeting</p>
             </div>
           </div>
           <div class="greeting__inner_content">
@@ -70,7 +70,7 @@
         </div>
       </section>
       <div class="hr">
-        <img src="/assets/images/about-hr.jpeg" alt="" />
+        <img src="<?php echo get_template_directory_uri()?>/assets/images/about-hr.jpeg" alt="" />
       </div>
 
       <section class="about-info">
