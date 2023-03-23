@@ -1,11 +1,11 @@
 @use "./common" as *;
 @use "./mixin" as *;
 
-
 .business-page-title {
   height: 420px;
   background-image: url(/wp-content/themes/tellus/assets/images/business-title.png);
   background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   &__text {
     position: absolute;
@@ -18,11 +18,17 @@
     text-align: center;
     h2 {
       font-family: "Libre Baskerville";
-      font-size: 48px;
+      font-size: 56px;
       letter-spacing: 2px;
+      @include w1440 {
+        font-size: 48px;
+      }
     }
     p {
-      font-size: 24px;
+      font-size: 28px;
+      @include w1440 {
+        font-size: 24px;
+      }
     }
   }
 }
@@ -33,11 +39,14 @@
     justify-content: center;
     align-items: center;
     column-gap: 108px;
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     padding-top: 48px;
     padding-bottom: 48px;
     letter-spacing: 0.4px;
+    @include w1440 {
+      font-size: 18px;
+    }
   }
 }
 
@@ -51,8 +60,11 @@
     text-align: left;
     font-family: "Shippori Mincho";
     font-weight: bold;
-    font-size: 32px;
+    font-size: 38px;
     color: #1b50a2;
+    @include w1440 {
+      font-size: 32px;
+    }
   }
   ul {
     border-left: 3px solid #1b50a2;
@@ -61,11 +73,17 @@
     margin-left: 24px;
     font-weight: normal;
     li {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.6;
+      @include w1440 {
+        font-size: 16px;
+      }
       &:first-child {
-        font-size: 20px;
+        font-size: 24px;
         padding-bottom: 16px;
+        @include w1440 {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -75,6 +93,16 @@
   position: absolute;
   top: 0;
   right: 120px;
+  z-index: 0;
+  img {
+    object-fit: cover;
+    height: 690px;
+  }
+  @include w1440 {
+    img {
+      height: auto;
+    }
+  }
 }
 
 .business-about {
@@ -120,8 +148,9 @@
       // height: 500px;
       object-fit: cover; /* 画像をアスペクト比を保ったまま親要素にフィットさせる */
       img {
-        max-width: 100%;
+        width: 100%;
         max-height: 100%;
+        object-fit: cover;
       }
     }
 

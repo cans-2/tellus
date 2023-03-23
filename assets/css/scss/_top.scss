@@ -1,22 +1,28 @@
 @use "./common" as *;
 @use "./mixin" as *;
 
-
 .white-bg {
   width: 100%;
-  height: 70px;
+  height: 100px;
   background: #fff;
+  @include w1440 {
+    height: 70px;
+  }
 }
 
 .main-img {
-  height: 720px;
-  object-fit: cover;
+  height: 840px;
+  background-size: cover;
   width: 100%;
   background-image: url(/wp-content/themes/tellus/assets/images/main-img.jpeg);
+  background-repeat: no-repeat;
   position: relative;
+  @include w1440{
+    height: 720px;
+  }
   .catchcopy {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 70%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
@@ -25,15 +31,27 @@
     color: #fff;
     font-family: "Shippori Mincho";
     letter-spacing: 2px;
+    @include w1440 {
+      top: 20%;
+      left: 70%;
+      letter-spacing: 2px;
+    }
     &__en {
-      font-size: 34px;
+      font-size: 48px;
       font-weight: bold;
       white-space: nowrap;
-      padding-bottom: 12px;
+      padding-bottom: 16px;
+      @include w1440 {
+        font-size: 34px;
+        padding-bottom: 12px;
+      }
     }
     &__ja {
-      font-size: 24px;
+      font-size: 32px;
       font-weight: 600;
+      @include w1440 {
+        font-size: 24px;
+      }
     }
   }
 }
@@ -44,6 +62,10 @@
   display: flex;
   &__left {
     width: 50%;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
   &__right {
     width: 50%;
@@ -54,15 +76,24 @@
 
     h2 {
       letter-spacing: 3px;
-      font-size: 18px;
+      font-size: 24px;
       font-family: "kadwa";
       padding-top: 144px;
+      @include w1440{
+        font-size: 18px;
+        padding-top: 144px;
+      }
     }
     &_text {
       letter-spacing: 3px;
-      font-size: 18px;
-      padding-top: 64px;
+      font-size: 22px;
+      padding-top: 80px;
       line-height: 2.5;
+      @include w1440{
+        font-size: 18px;
+        padding-top: 64px;
+
+      }
     }
     &_line {
       content: "";
@@ -74,10 +105,14 @@
     .readmore {
       margin-top: 120px;
       font-family: "kadwa";
-      font-size: 16px;
+      font-size: 24px;
       transition: all 0.5s ease-in-out;
-      &:hover{
+      &:hover {
         transform: translate(20px);
+      }
+      @include w1440{
+        font-size: 16px;
+
       }
     }
   }
@@ -96,15 +131,24 @@
     align-items: center;
     h2 {
       letter-spacing: 3px;
-      font-size: 18px;
+      font-size: 24px;
       font-family: "kadwa";
       padding-top: 144px;
+      @include w1440{
+        font-size: 18px;
+        padding-top: 144px;
+      }
     }
     &_text {
       letter-spacing: 3px;
-      font-size: 18px;
-      padding-top: 64px;
+      font-size: 22px;
+      padding-top: 80px;
       line-height: 2.5;
+      @include w1440{
+        font-size: 18px;
+        padding-top: 64px;
+
+      }
     }
     &_line {
       content: "";
@@ -114,41 +158,65 @@
       margin-top: 60px;
     }
     .readmore {
-      padding-top: 120px;
+      margin-top: 120px;
       font-family: "kadwa";
-      font-size: 16px;
+      font-size: 24px;
       transition: all 0.5s ease-in-out;
-      &:hover{
+      &:hover {
         transform: translate(20px);
+      }
+      @include w1440{
+        font-size: 16px;
+
       }
     }
   }
   &__right {
     width: 50%;
+    z-index: -1;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
 
 .top-contact {
   width: 100%;
-  height: 650px;
+  height: 700px;
   background: #1b1717;
   background-image: url(/wp-content/themes/tellus/assets/images/sec-contact.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #fff;
+  @include w1440{
+    height: 650px;
+  }
   h2 {
     font-family: "kadwa";
-    font-size: 24px;
+    font-size: 32px;
     letter-spacing: 3px;
-    padding-top: 90px;
+    padding-top: 110px;
+    @include w1440{
+      
+      padding-top: 90px;
+      font-size: 24px;
+    }
   }
   p {
-    padding-top: 24px;
-    font-size: 18px;
+    padding-top: 32px;
+    font-size: 20px;
     letter-spacing: 1px;
     line-height: 1.2;
     font-weight: normal;
+    @include w1440{
+      font-size: 18px;
+      padding-top: 24px;
+
+    }
   }
   &__tell-form {
     display: flex;
@@ -159,20 +227,32 @@
       flex-direction: column;
       align-items: center;
       p {
-        font-size: 22px;
+        font-size: 26px;
         font-weight: bold;
         line-height: 1.4;
         padding: 0;
+        @include w1440{
+          font-size: 22px;
+          
+        }
       }
       .phone {
-        padding-top: 16px;
+        padding-top: 24px;
         font-family: "kadwa";
-        font-size: 22px;
+        font-size: 26px;
         font-weight: 400;
+        @include w1440{
+          font-size: 22px;
+          padding-top: 16px;
+          
+        }
       }
       .hours {
-        font-size: 14px;
+        font-size: 18px;
         font-weight: normal;
+        @include w1440{
+          font-size: 14px;
+        }
       }
     }
     &-line {
@@ -189,10 +269,13 @@
     flex-direction: column;
     align-items: center;
     p {
-      font-size: 22px;
+      font-size: 26px;
       font-weight: bold;
       line-height: 1.4;
       padding: 0;
+      @include w1440{
+        font-size: 22px;
+      }
     }
     &-line {
       content: "";
@@ -206,10 +289,13 @@
       p {
         padding-top: 16px;
         font-family: "kadwa";
-        font-size: 22px;
+        font-size: 24px;
         font-weight: 400;
-        &:hover+.arrow{
+        &:hover + .arrow {
           transform: translateX(30px);
+        }
+        @include w1440{
+          font-size: 22px;
         }
       }
 
@@ -241,7 +327,6 @@
           background: #fff;
           transform: rotate(45deg);
         }
-        
       }
     }
   }
@@ -260,13 +345,19 @@
   &__left {
     .tellus {
       &__en {
-        font-size: 28px;
+        font-size: 32px;
         font-weight: bold;
         font-family: "kadwa";
+        @include w1440{
+          font-size: 28px;
+        }
       }
       &__ja {
-        font-size: 18px;
+        font-size: 22px;
         font-weight: normal;
+        @include w1440{
+          font-size: 18px;
+        }
       }
     }
     &_content {
@@ -276,23 +367,35 @@
       &_line {
         content: "";
         width: 2px;
-        height: 188px;
+        height: 220px;
         background: #363636;
+        @include w1440{
+          width: 2px;
+          height: 188px;
+        }
       }
       ul {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 500;
         letter-spacing: 1.5px;
         line-height: 2.5;
         max-width: 320px;
         margin-left: 36px;
+        @include w1440{
+          font-size: 16px;
+        }
       }
     }
   }
   &__right {
     iframe {
-      width: 500px;
-      height: 500px;
+      width: 700px;
+      height: 640px;
+      @include w1440{
+        
+        width: 500px;
+        height: 500px;
+      }
     }
   }
 }

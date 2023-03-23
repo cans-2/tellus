@@ -6,6 +6,7 @@
   height: 420px;
   background-image: url(/wp-content/themes/tellus/assets/images/contact-title.png);
   background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   &__text {
     position: absolute;
@@ -31,21 +32,31 @@
   text-align: center;
   padding-top: 80px;
   padding-bottom: 80px;
-  font-size: 24px;
+  font-size: 30px;
+  @include w1440{
+    font-size: 24px;
+  }
 }
 
 .contact-flow {
-  padding-left: 64px;
-  padding-right: 64px;
+  padding-left: 120px;
+  padding-right: 120px;
   padding-bottom: 144px;
+  @include w1440{
+    padding-left: 64px;
+    padding-right: 64px;
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
     .link {
       padding-top: 32px;
       text-align: center;
-      font-size: 24px;
+      font-size: 28px;
       font-weight: normal;
+      @include w1440{
+        font-size: 24px;
+      }
       a {
         display: block;
         transition: all 0.5s ease-in-out;
@@ -57,7 +68,10 @@
     }
     &_item {
       position: relative;
-      width: 450px;
+      width: 550px;
+      @include w1440{
+        width: 450px;
+      }
       &_number {
         position: absolute;
         top: 0;
@@ -97,8 +111,11 @@
         }
         &_p {
           padding-top: 40px;
-          font-size: 14px;
+          font-size: 18px;
           line-height: 1.6;
+          @include w1440{
+            font-size: 14px;
+          }
         }
       }
     }
@@ -113,6 +130,10 @@
   position: relative;
   overflow: hidden; /* コンテンツがはみ出さないようにするために必要 */
   transition: all 0.3s ease; /* ボタン全体にアニメーションを追加 */
+  @include w1440{
+    width: 700px;
+    height: 160px;
+  }
   &:hover {
     transform: scale(
       0.99
@@ -160,22 +181,31 @@
   margin-top: 105px;
   margin-bottom: 160px;
   &__inner {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 40px 126px 60px;
     border: #363636 1px solid;
+    @include w1440{
+      max-width: 1000px;
+    }
     h4 {
       font-weight: bold;
-      font-size: 36px;
+      font-size: 42px;
       text-align: center;
+      @include w1440{
+        font-size: 36px;
+      }
     }
     &_title {
       max-width: 750px;
       margin: 0 auto;
       padding-top: 60px;
       font-weight: normal;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 1.5;
+      @include w1440{
+        font-size: 16px;
+      }
       a {
         color: #1b50a2;
         border-bottom: 1px solid #1b50a2;
@@ -209,6 +239,10 @@
           border-bottom: 1px solid #d9d9d9;
           display: flex;
           justify-content: space-between;
+          font-size: 18px;
+          @include w1440{
+            font-size: 16px;
+          }
         }
         input[type="text"],
         input[type="email"],
@@ -263,6 +297,10 @@
         color: #fff;
         margin-top: 24px;
         cursor: pointer;
+        font-size: 20px;
+        @include w1440{
+          font-size: 16px;
+        }
       }
     }
   }
