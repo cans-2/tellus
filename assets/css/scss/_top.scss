@@ -27,7 +27,7 @@
   @include w768{
     height: 600px;
   }
-  @include w500{
+  @include w599{
     height: 500px;
   }
   .catchcopy {
@@ -50,7 +50,7 @@
       top: 30%;
       left: 50%;
     }
-    @include w500{
+    @include w599{
       top: 40%;
     }
     &__en {
@@ -65,7 +65,7 @@
       @include w768{
         white-space:break-spaces;
       }
-      @include w500{
+      @include w599{
         text-align: left;
         font-size: 26px;
       }

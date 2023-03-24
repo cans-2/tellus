@@ -19,11 +19,20 @@
     text-align: center;
     h2 {
       font-family: "Libre Baskerville";
-      font-size: 48px;
+      font-size: 56px;
       letter-spacing: 2px;
+      @include w1440{
+        font-size: 48px;
+      }
+      @include w768{
+        font-size: 38px;
+      }
     }
     p {
       font-size: 24px;
+      @include w768{
+        font-size: 20px;
+      }
     }
   }
 }
@@ -36,19 +45,26 @@
   @include w1440{
     font-size: 24px;
   }
+  @include w768{
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .contact-flow {
-  padding-left: 120px;
-  padding-right: 120px;
+  padding-left: 64px;
+  padding-right: 64px;
   padding-bottom: 144px;
-  @include w1440{
-    padding-left: 64px;
-    padding-right: 64px;
+  @include w1200{
+    padding-bottom: 64px;
   }
   &__inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    @include w1200{
+      flex-direction: column;
+      align-items: center;
+    }
     .link {
       padding-top: 32px;
       text-align: center;
@@ -68,9 +84,19 @@
     }
     &_item {
       position: relative;
-      width: 550px;
+      width: 400px;
       @include w1440{
-        width: 450px;
+        width: 300px;
+      }
+      @include w1200{
+        width: 600px;
+        margin-bottom: 40px;
+      }
+      @include w768{
+        width: 460px;
+      }
+      @include w500{
+        width: 350px;
       }
       &_number {
         position: absolute;
@@ -78,6 +104,9 @@
         left: 0;
         font-family: "Kadwa";
         font-size: 48px;
+        @include w768{
+          font-size: 42px;
+        }
       }
       &_images {
         display: flex;
@@ -85,6 +114,14 @@
         align-items: center;
         column-gap: 48px;
         padding-top: 160px;
+        @include w1200{
+          padding-top: 80px;
+        }
+        @include w768{
+          img{
+            width: 90px;
+          }
+        }
       }
       &_text {
         padding-top: 48px;
@@ -115,6 +152,8 @@
           line-height: 1.6;
           @include w1440{
             font-size: 14px;
+            padding-right: 12px;
+            padding-left: 12px;
           }
         }
       }
@@ -124,8 +163,8 @@
 
 .tel-btn {
   background: #363636;
-  width: 600px;
-  height: 120px;
+  width: 800px;
+  height: 180px;
   margin: 0 auto;
   position: relative;
   overflow: hidden; /* コンテンツがはみ出さないようにするために必要 */
@@ -133,6 +172,14 @@
   @include w1440{
     width: 700px;
     height: 160px;
+  }
+  @include w768{
+    width: 500px;
+    height: 120px;
+  }
+  @include w599{
+    width: 350px;
+    height: 80px;
   }
   &:hover {
     transform: scale(
@@ -147,6 +194,12 @@
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transition: all 0.3s ease; /* アニメーションを追加 */
+    @include w768{
+      width: 50px;
+    }
+    @include w500{
+      width: 40px;
+    }
   }
   &:hover img {
     transform: translate(-50%, -50%) scale(0.9); /* 押し込まれるアニメーションを追加 */
@@ -164,15 +217,31 @@
     color: #fff;
     h6 {
       font-weight: bold;
-      font-size: 32px;
+      font-size: 38px;
+      @include w1440{
+        font-size: 32px;
+      }
+      @include w768{
+        font-size: 24px;
+      }
+      @include w599{
+        font-size: 20px;
+        white-space: nowrap;
+      }
     }
     p {
       padding-top: 12px;
       display: block;
-      font-size: 24px;
+      font-size: 28px;
       font-family: "Kadwa";
       text-align: center;
       letter-spacing: 2px;
+      @include w1440{
+        font-size: 24px;
+      }
+      @include w599{
+        font-size: 16px;
+      }
     }
   }
 }
@@ -180,6 +249,14 @@
 .contact-form {
   margin-top: 105px;
   margin-bottom: 160px;
+  @include w1200{
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  @include w768{
+    margin-bottom: 80px;
+    margin-top: 60px;
+  }
   &__inner {
     max-width: 1200px;
     margin: 0 auto;
@@ -187,6 +264,8 @@
     border: #363636 1px solid;
     @include w1440{
       max-width: 1000px;
+      padding: 16px;
+      padding-top: 48px;
     }
     h4 {
       font-weight: bold;
@@ -194,6 +273,9 @@
       text-align: center;
       @include w1440{
         font-size: 36px;
+      }
+      @include w768{
+        font-size: 28px;
       }
     }
     &_title {
@@ -205,6 +287,10 @@
       line-height: 1.5;
       @include w1440{
         font-size: 16px;
+      }
+      @include w768{
+        font-size: 12px;
+        padding-top: 48px;
       }
       a {
         color: #1b50a2;
@@ -222,6 +308,9 @@
       justify-content: center;
       align-items: center;
       color: #363636;
+      @include w768{
+        padding-top: 60px;
+      }
       .required::before {
         content: "*";
         margin-left: -8px;
@@ -243,6 +332,18 @@
           @include w1440{
             font-size: 16px;
           }
+          @include w768{
+            width: 300px;
+            padding-right: 12px;
+            padding-left: 12px;
+            flex-direction: column;
+            padding-right: 0;
+            padding-left: 0;
+            font-size: 14px;
+          }
+          @include w500{
+            width: 250px;
+          }
         }
         input[type="text"],
         input[type="email"],
@@ -253,6 +354,14 @@
           padding-left: 8px;
           padding-right: 8px;
           outline: none;
+          @include w768{
+            width: 300px;
+            margin-left: 8px;
+            margin-top: 8px;
+          }
+          @include w500{
+            width: 250px;
+          }
         }
         textarea {
           width: 400px;
@@ -261,7 +370,14 @@
           padding: 8px;
           margin-bottom: 30px;
           outline: none;
-
+          @include w768{
+            width: 320px;
+            margin-left: 8px;
+            margin-top: 8px;
+          }
+          @include w500{
+            width: 250px;
+          }
         }
       }
       .privacy {
@@ -277,6 +393,10 @@
             display: flex;
             justify-content: center;
             border-bottom: none;
+            @include w768{
+              flex-direction: row;
+              font-size: 14px;
+            }
             a {
               color: #1b50a2;
               &:hover{
@@ -288,8 +408,8 @@
       }
       input[type="submit"] {
         background: #363636;
-        width: 180px;
-        height: 50px;
+        width: 220px;
+        height: 60px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -300,6 +420,13 @@
         font-size: 20px;
         @include w1440{
           font-size: 16px;
+          width: 180px;
+          height: 50px;
+        }
+        @include w768{
+          width: 150px;
+          height: 40px;
+          margin-top: 16px;
         }
       }
     }

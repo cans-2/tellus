@@ -48,7 +48,7 @@
           </div>
           <div class="philosophy__content">
             <p class="philosophy__content_title">
-              お客様にとって一番身近な自動車販売店でありたい
+              お客様にとって一番身近な<br class="philosophy__content_title_br">自動車販売店でありたい
             </p>
             <p>
               お客様満足度の向上、お客様のニーズに応じたカーライフのトータルサポートを最優先に取り組み致します。

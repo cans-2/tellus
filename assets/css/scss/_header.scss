@@ -67,6 +67,9 @@ header {
   justify-content: space-between;
   .header__left {
     margin-left: 40px;
+    @include w599{
+      margin-left: 16px;
+    }
     h1 {
       font-family: "kadwa";
       font-size: 26px;

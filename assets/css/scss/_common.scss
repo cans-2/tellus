@@ -19,6 +19,9 @@ body{
         @include w1440{
             font-size: 36px;
         }
+        @include w768{
+            font-size: 28px;
+        }
     }
     p{
         font-size: 26px;
@@ -29,6 +32,9 @@ body{
         padding-top: 18px;
         @include w1440{
             font-size: 22px;
+        }
+        @include w768{
+            font-size: 18px;
         }
     }
 }
