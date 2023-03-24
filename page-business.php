@@ -18,6 +18,21 @@
           <li><a href="<?php echo get_home_url() ?>/contact">Contact</a></li>
         </ul>
       </nav>
+      <div class="menu-icon">
+        <span class="menu-icon__line"></span>
+        <span class="menu-icon__line"></span>
+        <span class="menu-icon__line"></span>
+    </div>
+      <nav class="menu">
+        <ul>
+            <li><a href="<?php echo get_home_url() ?>">Top</a></li>
+            <li><a href="<?php echo get_home_url() ?>/business">Business</a></li>
+            <li><a href="<?php echo get_home_url() ?>/about">About us</a></li>
+            <li><a href="<?php echo get_home_url() ?>/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="mask"></div>
+
     </header>
     <div class="business-page-title__text">
       <h2>Business</h2>
@@ -47,7 +62,7 @@
         </div>
 
         <div class="business-sec-content">
-          <h4>あなただけの「出会い」を</h4>
+          <h4>あなただけの<br class="business-sec-content_br">「出会い」を</h4>
           <ul>
             <li>主に輸入車を中心に幅広く取り扱っております。</li>
             <li>
@@ -75,7 +90,7 @@
         </div>
 
         <div class="business-sec-content">
-          <h4>その一台にしかない「特別」を</h4>
+          <h4>その一台にしかない<br class="business-sec-content_br">「特別」を</h4>
           <ul>
             <li>憧れの車をあなたに。</li>
             <li>

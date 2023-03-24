@@ -8,6 +8,9 @@
   @include w1440 {
     height: 70px;
   }
+  @include w599{
+    display: none;
+  }
 }
 
 .main-img {
@@ -16,9 +19,16 @@
   width: 100%;
   background-image: url(/wp-content/themes/tellus/assets/images/main-img.jpeg);
   background-repeat: no-repeat;
+  background-position: 80%;
   position: relative;
-  @include w1440{
+  @include w1440 {
     height: 720px;
+  }
+  @include w768{
+    height: 600px;
+  }
+  @include w500{
+    height: 500px;
   }
   .catchcopy {
     position: absolute;
@@ -36,9 +46,12 @@
       left: 70%;
       letter-spacing: 2px;
     }
-    @include w1200{
+    @include w1200 {
       top: 30%;
       left: 50%;
+    }
+    @include w500{
+      top: 40%;
     }
     &__en {
       font-size: 48px;
@@ -49,12 +62,23 @@
         font-size: 34px;
         padding-bottom: 12px;
       }
+      @include w768{
+        white-space:break-spaces;
+      }
+      @include w500{
+        text-align: left;
+        font-size: 26px;
+      }
     }
     &__ja {
       font-size: 32px;
       font-weight: 600;
       @include w1440 {
         font-size: 24px;
+      }
+      @include w500{
+        white-space:nowrap;
+        font-size: 20px;
       }
     }
   }
@@ -64,15 +88,26 @@
   width: 100%;
   height: 800px;
   display: flex;
-  @include w1200{
-    height: 700px;
+  @include w1200 {
+    height: 650px;
+  }
+  @include w768 {
+    flex-direction: column-reverse;
+    height: auto;
   }
   &__left {
     width: 50%;
+    @include w768{
+      width: 100%;
+      height: 140px;
+    }
     img {
       width: 100%;
-      object-fit: cover;
       height: 100%;
+      object-fit: cover;
+      @include w768{
+        object-position: 90%;
+      }
     }
   }
   &__right {
@@ -81,15 +116,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include w768 {
+      width: 100%;
+    }
 
     h2 {
       letter-spacing: 3px;
       font-size: 24px;
       font-family: "kadwa";
       padding-top: 144px;
-      @include w1440{
+      @include w1440 {
         font-size: 18px;
         padding-top: 144px;
+      }
+      @include w1200 {
+        padding-top: 100px;
+      }
+      @include w768 {
+        font-size: 22px;
+        padding-top: 80px;
       }
     }
     &_text {
@@ -97,11 +142,11 @@
       font-size: 22px;
       padding-top: 80px;
       line-height: 2.5;
-      @include w1440{
+      @include w1440 {
         font-size: 18px;
         padding-top: 64px;
       }
-      @include w1200{
+      @include w1200 {
         padding-top: 90px;
       }
     }
@@ -111,8 +156,17 @@
       height: 1px;
       background: #363636;
       margin-top: 60px;
-      @include w1200{
+      @include w1200 {
         width: 400px;
+      }
+      @include w900 {
+        width: 300px;
+      }
+      @include w768 {
+        width: 400px;
+      }
+      @include w500{
+        width: 320px;
       }
     }
     .readmore {
@@ -123,11 +177,15 @@
       &:hover {
         transform: translate(20px);
       }
-      @include w1440{
+      @include w1440 {
         font-size: 16px;
       }
-      @include w1200{
+      @include w1200 {
         font-size: 18px;
+      }
+      @include w768 {
+        padding-bottom: 64px;
+        margin-top: 80px;
       }
     }
   }
@@ -137,8 +195,12 @@
   width: 100%;
   height: 800px;
   display: flex;
-  @include w1200{
-    height: 700px;
+  @include w1200 {
+    height: 650px;
+  }
+  @include w768 {
+    flex-direction: column;
+    height: auto;
   }
   &__left {
     width: 50%;
@@ -147,14 +209,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include w768 {
+      width: 100%;
+    }
     h2 {
       letter-spacing: 3px;
       font-size: 24px;
       font-family: "kadwa";
       padding-top: 144px;
-      @include w1440{
+      @include w1440 {
         font-size: 18px;
         padding-top: 144px;
+      }
+      @include w1200 {
+        padding-top: 100px;
+      }
+      @include w599{
+        padding-top: 80px;
       }
     }
     &_text {
@@ -162,12 +233,11 @@
       font-size: 22px;
       padding-top: 80px;
       line-height: 2.5;
-      @include w1440{
+      @include w1440 {
         font-size: 18px;
         padding-top: 64px;
-
       }
-      @include w1200{
+      @include w1200 {
         padding-top: 100px;
       }
     }
@@ -186,17 +256,26 @@
       &:hover {
         transform: translate(20px);
       }
-      @include w1440{
+      @include w1440 {
         font-size: 16px;
       }
-      @include w1200{
+      @include w1200 {
         font-size: 18px;
+      }
+      @include w768 {
+        font-size: 20px;
+        padding-bottom: 64px;
       }
     }
   }
   &__right {
     width: 50%;
     z-index: -1;
+    @include w768 {
+      width: 100%;
+      height: 140px;
+    }
+    
     img {
       width: 100%;
       object-fit: cover;
@@ -216,16 +295,18 @@
   flex-direction: column;
   align-items: center;
   color: #fff;
-  @include w1440{
+  @include w1440 {
     height: 650px;
+  }
+  @include w599{
+    height: auto;
   }
   h2 {
     font-family: "kadwa";
     font-size: 32px;
     letter-spacing: 3px;
     padding-top: 110px;
-    @include w1440{
-      
+    @include w1440 {
       padding-top: 90px;
       font-size: 24px;
     }
@@ -236,28 +317,42 @@
     letter-spacing: 1px;
     line-height: 1.2;
     font-weight: normal;
-    @include w1440{
+    @include w1440 {
       font-size: 18px;
       padding-top: 24px;
-
+    }
+    @include w599{
+      white-space:break-spaces;
+    max-width: 350px;
+    padding-left: 12px;
+    padding-right: 12px;
     }
   }
   &__tell-form {
     display: flex;
     padding-top: 96px;
     column-gap: 224px;
+    @include w768 {
+      column-gap: 120px;
+    }
+    @include w599{
+      flex-direction: column;
+      padding-top: 60px;
+    }
     .top-contact__tell {
       display: flex;
       flex-direction: column;
       align-items: center;
+      @include w599{
+        padding-bottom: 56px;
+      }
       p {
         font-size: 26px;
         font-weight: bold;
         line-height: 1.4;
         padding: 0;
-        @include w1440{
+        @include w1440 {
           font-size: 22px;
-          
         }
       }
       .phone {
@@ -265,16 +360,15 @@
         font-family: "kadwa";
         font-size: 26px;
         font-weight: 400;
-        @include w1440{
+        @include w1440 {
           font-size: 22px;
           padding-top: 16px;
-          
         }
       }
       .hours {
         font-size: 18px;
         font-weight: normal;
-        @include w1440{
+        @include w1440 {
           font-size: 14px;
         }
       }
@@ -285,6 +379,9 @@
       height: 1px;
       background: #fff;
       margin-top: 16px;
+      @include w599{
+        width: 100%;
+      }
     }
   }
 
@@ -292,12 +389,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include w599{
+      padding-bottom: 56px;
+    }
     p {
       font-size: 26px;
       font-weight: bold;
       line-height: 1.4;
       padding: 0;
-      @include w1440{
+      @include w1440 {
         font-size: 22px;
       }
     }
@@ -318,7 +418,7 @@
         &:hover + .arrow {
           transform: translateX(30px);
         }
-        @include w1440{
+        @include w1440 {
           font-size: 22px;
         }
       }
@@ -365,26 +465,42 @@
     justify-content: center;
     padding-top: 164px;
     padding-bottom: 120px;
-    @include w1200{
+    @include w1200 {
       column-gap: 0;
       justify-content: space-around;
+    }
+    @include w900 {
+      padding-top: 120px;
+    }
+    @include w768 {
+      flex-direction: column;
+      column-gap: 0;
+      padding-bottom: 80px;
+      padding-top: 80px;
     }
   }
   &__left {
     .tellus {
+      padding-left: 12px;
       &__en {
         font-size: 32px;
         font-weight: bold;
         font-family: "kadwa";
-        @include w1440{
+        @include w1440 {
           font-size: 28px;
+        }
+        @include w900 {
+          font-size: 24px;
         }
       }
       &__ja {
         font-size: 22px;
         font-weight: normal;
-        @include w1440{
+        @include w1440 {
           font-size: 18px;
+        }
+        @include w900 {
+          font-size: 16px;
         }
       }
     }
@@ -397,9 +513,12 @@
         width: 2px;
         height: 220px;
         background: #363636;
-        @include w1440{
+        @include w1440 {
           width: 2px;
           height: 188px;
+        }
+        @include w768 {
+          display: none;
         }
       }
       ul {
@@ -409,8 +528,20 @@
         line-height: 2.5;
         max-width: 320px;
         margin-left: 36px;
-        @include w1440{
+        @include w1440 {
           font-size: 16px;
+        }
+        @include w900 {
+          font-size: 14px;
+        }
+        @include w768{
+          margin-left: 0;
+          max-width: 600px;
+        }
+        @include w500{
+          padding-left: 12px;
+          padding-right: 12px;
+
         }
       }
     }
@@ -419,10 +550,27 @@
     iframe {
       width: 700px;
       height: 640px;
-      @include w1440{
-        
+      @include w1440 {
         width: 500px;
         height: 500px;
+      }
+      @include w1200 {
+        width: 450px;
+        height: 450px;
+      }
+      @include w900 {
+        width: 350px;
+        height: 350px;
+      }
+      @include w768{
+      width: 580px;
+      margin-top: 40px;
+      }
+      @include w599{
+        width: 480px;
+      }
+      @include w500{
+        width: 360px;
       }
     }
   }

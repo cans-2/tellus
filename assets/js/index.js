@@ -14,3 +14,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
     });
   });
+
+  // ハンバーガーメニュー
+  const menuIcon = document.querySelector('.menu-icon');
+  const menu = document.querySelector('.menu');
+  const mask = document.getElementById('mask');
+  
+  menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('active');
+    menu.classList.toggle('active');
+    mask.classList.toggle('active')
+  });
+  

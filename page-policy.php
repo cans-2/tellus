@@ -1,8 +1,9 @@
 <?php get_header() ?>
-  <body>
-  <header>
+
+<body>
+    <header>
         <div class="header__left">
-            <a href="<?php echo get_home_url()?>">
+            <a href="<?php echo get_home_url() ?>">
 
                 <h1>TELLUS INTERNATIONAL</h1>
                 <p>有限会社テルズインターナショナル</p>
@@ -10,12 +11,27 @@
         </div>
         <nav class="header__right">
             <ul>
-                <li><a href="<?php echo get_home_url()?>">Top</a></li>
-                <li><a href="<?php echo get_home_url()?>/business">Business</a></li>
-                <li><a href="<?php echo get_home_url()?>/about">About us</a></li>
-                <li><a href="<?php echo get_home_url()?>/contact">Contact</a></li>
+                <li><a href="<?php echo get_home_url() ?>">Top</a></li>
+                <li><a href="<?php echo get_home_url() ?>/business">Business</a></li>
+                <li><a href="<?php echo get_home_url() ?>/about">About us</a></li>
+                <li><a href="<?php echo get_home_url() ?>/contact">Contact</a></li>
             </ul>
         </nav>
+        <div class="menu-icon">
+            <span class="menu-icon__line"></span>
+            <span class="menu-icon__line"></span>
+            <span class="menu-icon__line"></span>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="<?php echo get_home_url() ?>">Top</a></li>
+                <li><a href="<?php echo get_home_url() ?>/business">Business</a></li>
+                <li><a href="<?php echo get_home_url() ?>/about">About us</a></li>
+                <li><a href="<?php echo get_home_url() ?>/contact">Contact</a></li>
+            </ul>
+        </nav>
+    <div id="mask"></div>
+
     </header>
     <main>
         <div class="privacy-policy">
@@ -37,5 +53,5 @@
             </div>
         </div>
     </main>
-  
-<?php get_footer() ?>
+
+    <?php get_footer() ?>

@@ -18,6 +18,21 @@
           <li><a href="<?php echo get_home_url() ?>/contact">Contact</a></li>
         </ul>
       </nav>
+      <div class="menu-icon">
+        <span class="menu-icon__line"></span>
+        <span class="menu-icon__line"></span>
+        <span class="menu-icon__line"></span>
+    </div>
+      <nav class="menu">
+        <ul>
+            <li><a href="<?php echo get_home_url() ?>">Top</a></li>
+            <li><a href="<?php echo get_home_url() ?>/business">Business</a></li>
+            <li><a href="<?php echo get_home_url() ?>/about">About us</a></li>
+            <li><a href="<?php echo get_home_url() ?>/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="mask"></div>
+
     </header>
     <div class="contact-page-title__text">
       <h2>Contact</h2>

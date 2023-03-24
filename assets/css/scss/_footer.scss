@@ -15,6 +15,9 @@ footer {
       column-gap: 0;
       justify-content: space-around;
     }
+    @include w500{
+      align-items: start;
+    }
     .tellus {
       &__en {
         font-size: 30px;
@@ -23,12 +26,18 @@ footer {
         @include w1440 {
           font-size: 24px;
         }
+        @include w500{
+          font-size: 20px;
+        }
       }
       &__ja {
         font-size: 20px;
         font-weight: normal;
         @include w1440 {
           font-size: 16px;
+        }
+        @include w500{
+          font-size: 12px;
         }
       }
     }
@@ -44,6 +53,9 @@ footer {
         flex-direction: column;
         column-gap: 0;
         row-gap: 10px;
+      }
+      @include w500{
+        font-size: 16px;
       }
     }
   }

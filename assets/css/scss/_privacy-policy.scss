@@ -5,6 +5,7 @@
   margin: 0 auto;
   text-align: center;
   padding-top: 144px;
+ 
   h2 {
     font-family: "kadwa";
     font-size: 18px;
@@ -14,20 +15,33 @@
   &__content {
     padding-top: 28px;
     padding-bottom: 172px;
-    width: 900px;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 900px;
     line-height: 1.5;
     margin: 0 auto;
     text-align: left;
+    @include w768{
+      padding-bottom: 120px;
+    }
 
     h3{
         font-size: 20px;
         font-weight: bold;
         text-align: left;
         padding-top: 64px;
+        @include w768{
+          padding-top: 40px;
+          font-size: 18px;
+        }
     }
     p {
       font-size: 16px;
       padding-top: 64px;
+      @include w768{
+        padding-top: 40px;
+        font-size: 14px;
+      }
     }
   }
 }
