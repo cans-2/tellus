@@ -64,20 +64,21 @@
       }
       @include w768{
         white-space:break-spaces;
+        text-align: left;
       }
       @include w599{
-        text-align: left;
         font-size: 26px;
       }
     }
     &__ja {
       font-size: 32px;
       font-weight: 600;
+      white-space:nowrap;
+
       @include w1440 {
         font-size: 24px;
       }
       @include w500{
-        white-space:nowrap;
         font-size: 20px;
       }
     }
